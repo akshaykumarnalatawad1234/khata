@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/logo1.png" type="images/png">
+    <link rel="stylesheet" href="style.css">
+    <title>Cascade</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {
+            'packages': ['corechart']
+        });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Year', 'Sales', 'Expenses'],
+                ['5', 56, 1005],
+                ['10', 45, 910],
+                ['15', 62, 1140],
+                ['20', 58, 1040],
+                ['25', 49, 960],
+                ['30', 67, 1320]
+            ]);
+
+            var options = {
+                title: 'Sales this month',
+                curveType: 'function',
+                legend: {
+                    position: 'bottom'
+                }
+            };
+
+            var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+            chart.draw(data, options);
+        }
+    </script>
+</head>
+
+<body class="second">
+    <div class="container1">
+        <div class="cas_logo">
+            <a href="file.html " class="cascade">
+                <img src="images/logo1.PNG " alt="Cascade Logo " class="logo ">
+                <h1 class="header1">Cascade</h1>
+            </a>
+        </div>
+
+
+        <nav class="nav_menu">
+            <ul class="navbar">
+                <li><a href="file.html">Home</a></li>
+                <li><a href="scheme.html">Schemes</a></li>
+                <li><a href="hotspot.html">Hotspots</a></li>
+                <li class="active"><a href="khata.html">Khata</a></li>
+                <li><a href="#feedback">Contact Us</a></li>
+            </ul>
+        </nav>
+        <hr>
+        <div class="container5">
+            <h1 id="khata_header">BILLING</h1>
+            <a href="#bill_header" class="get_bill"><span class="plus">+</span> Create Bill</a>
+
+            <div class="costs">
+                <p>Sales this month: 337</p>
+                <p>Costs this month: INR 6375</p>
+                <p>Profit : 2.9%</p>
+            </div>
+            <div class="chart">
+                <div id="curve_chart" style="width: 100%; height: auto; text-align:center"></div>
+            </div>
+            <div class="cont1">
+                <form action="" id="login-form " class="cont2">
+                    <h1 id="bill_header">Bill Form</h1>
+                    <label for="">Name: 
+                        <input type="text" placeholder="Name" class="bill_input" required>
+                    </label>
+                    <label for=""> Email: 
+                    <input type="email" placeholder="Email" class="bill_input" required>
+                </label>
+                    <input type="text" placeholder="Item Name" class="bill_input" required>
+                    <input type="text" placeholder="price" class="bill_input" required>
+                    <input type="submit" value="Submit" class="bill_submit">
+                </form>
+                <div class="display_submit">
+                    <h3 id="display_msg">Thanks for submitting</h3>
+
+                </div>
+            </div>
+        </div>
+        <div class="container2">
+            <h1 id="feedback">Contact Us</h1>
+            <hr class="sec">
+            <br>
+            <p>Feel free to contact us by sending us your queries via <b><i>mail</i></b> or <b><i>google forms</i></b></p>
+            <button href="mailto:akshaykumarnalatawad1234@gmail.com " class="contact_us ">Email Us</button>
+            <button href="" target="_blank " class="contact_us ">Google Forms</button>
+        </div>
+
+        <div class="footer">
+            <p class="foot">Get the services provided by us for free. Everyone deserves a chance to rise.</p>
+            <p class="copyright ">&copy;Copyright 2021 Cascade Enterprises. All Rights Reserved.<br><a href="# " class="privacy group ">Privacy Policy</a>|<a href="# " class="terms group ">Terms of Use</a></p>
+        </div>
+        <script src="script.hmtl"></script>
+</body>
+
+</html>
